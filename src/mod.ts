@@ -34,7 +34,9 @@ import { template } from "./template.ts";
 /**
  * Factory function for creating a password middleware.
  */
-export function passwordMiddleware(config: Config) {
+export function passwordMiddleware(
+  config: Config,
+): (req: NextRequest) => Promise<Response> {
   const resolvedConfig = resolveConfig(config);
   if (!resolvedConfig.secret) {
     throw new Error("The secret is required.");
