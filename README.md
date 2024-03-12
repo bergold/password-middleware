@@ -19,6 +19,7 @@ Middleware to protect your deployments from public access.
    import { passwordMiddleware } from "@bergold/password-middleware";
 
    export const middleware = passwordMiddleware({
+    dev: process.env.NODE_ENV !== "production",
      secret: process.env.SECRET,
      password: process.env.PASSWORD,
    });

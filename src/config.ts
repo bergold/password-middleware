@@ -1,8 +1,8 @@
 import { ResponseCookie } from "./deps.ts";
 import { iron } from "./deps.ts";
 
-type SealOptions = iron.SealOptions;
-type CookieOptions = Omit<ResponseCookie, "value">;
+export type SealOptions = iron.SealOptions;
+export type CookieOptions = Omit<ResponseCookie, "value">;
 
 /**
  * Configuration options
@@ -51,16 +51,16 @@ export interface Config {
   /**
    * Custom theme for the protection form.
    */
-  theme: {
+  theme?: {
     /**
      * Used as the accent color for the protection form.
      */
-    brandColor: string;
+    brandColor?: string;
 
     /**
      * Absolute URL to the logo.
      */
-    logo: string;
+    logo?: string;
   };
 }
 
