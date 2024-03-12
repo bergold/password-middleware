@@ -1,6 +1,6 @@
 # password middleware
 
-> ![IMPORTANT]  
+> [!IMPORTANT]  
 > This package is work-in-progress. Use with care!
 
 Middleware to protect your deployments from public access.
