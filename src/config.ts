@@ -1,7 +1,14 @@
 import { ResponseCookie } from "./deps.ts";
 import { iron } from "./deps.ts";
 
+/**
+ * @see https://jsr.io/@brc-dd/iron/doc/~/SealOptions
+ */
 export type SealOptions = iron.SealOptions;
+
+/**
+ * @see https://wicg.github.io/cookie-store/#dictdef-cookielistitem
+ */
 export type CookieOptions = Omit<ResponseCookie, "value">;
 
 /**
@@ -39,7 +46,7 @@ export interface Config {
   route?: string;
 
   /**
-   * The options for the cookie.
+   * The options for the encryption and signature.
    */
   sealOptions?: SealOptions;
 
