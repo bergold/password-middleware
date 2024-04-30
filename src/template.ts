@@ -134,7 +134,7 @@ export function template({
         ${error ? `<p class="error">${error}</p>` : ""}
         <label>
           Password
-          <input type="password" name="password" />
+          <input type="password" name="password" autocomplete="current-password" />
         </label>
         <button type="submit">Log in</button>
       </form>
